@@ -19,7 +19,7 @@ func main() {
 	user := flag.String("user", os.Getenv("MAIL_SENDER_USER"), "user")
 	pass := flag.String("pass", os.Getenv("MAIL_SENDER_PASS"), "pass")
 	to := flag.String("to", os.Getenv("MAIL_SENDER_TO"), "to")
-	from := flag.String("from", "", "from")
+	from := flag.String("from", os.Getenv("MAIL_SENDER_FROM"), "from")
 	subject := flag.String("subject", "", "subject")
 	body := flag.String("body", "", "body")
 	flag.Parse()
